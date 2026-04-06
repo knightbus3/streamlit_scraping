@@ -3,6 +3,26 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
+
+st.set_page_config(page_title="Books Search App", layout="wide")
+
+#CSSスタイルの追加
+st.markdown("""<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap');
+
+.main-header{
+            text-align: center;
+            bborder-bottom: 1px solid rgba(180, 130, 60, 0.25);
+            margin-bottom: 36px;
+            }
+
+.stApp {
+    background-color: #C0C0C0;
+        }
+</style>""", unsafe_allow_html=True)
+
+
+
 # ページの基本情報
 BASE_URL = "http://books.toscrape.com/catalogue/page-{}.html"
 
